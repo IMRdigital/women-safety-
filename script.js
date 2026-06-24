@@ -161,3 +161,12 @@ function findHospital() {
         "_blank"
     );
 }
+function findPolice() {
+    window.location.href =
+    "https://www.google.com/maps/search/police+station";
+}
+
+function findHospital() {
+    window.location.href =
+    "https://www.google.com/maps/search/hospital";
+}
