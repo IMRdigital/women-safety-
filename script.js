@@ -21,7 +21,18 @@ window.open(
 "_blank"
 );
 
-alert("🚨 SOS Activated!");
+const emergencyName =
+localStorage.getItem("emergencyName");
+
+const emergencyPhone =
+localStorage.getItem("emergencyPhone");
+
+alert(
+`🚨 SOS Activated!
+
+Contact: ${emergencyName}
+Phone: ${emergencyPhone}`
+);
 
 },
 (error) => {
