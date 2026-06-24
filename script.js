@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 const sosBtn = document.querySelector(".sos-btn");
+const locationText = document.getElementById("location-text");
 
 sosBtn.addEventListener("click", () => {
 
@@ -12,9 +13,15 @@ navigator.geolocation.getCurrentPosition(
 const lat = position.coords.latitude;
 const lon = position.coords.longitude;
 
-alert(
-`🚨 SOS Activated!\n\nLatitude: ${lat}\nLongitude: ${lon}`
+locationText.innerHTML =
+`Latitude: ${lat}<br>Longitude: ${lon}`;
+
+window.open(
+`https://www.google.com/maps?q=${lat},${lon}`,
+"_blank"
 );
+
+alert("🚨 SOS Activated!");
 
 },
 (error) => {
