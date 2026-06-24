@@ -113,3 +113,38 @@ document.querySelector(".sos-btn").click();
 };
 
 recognition.start();
+function findPolice(){
+
+navigator.geolocation.getCurrentPosition(
+(position)=>{
+
+const lat = position.coords.latitude;
+const lon = position.coords.longitude;
+
+window.open(
+`https://www.google.com/maps/search/police+station/@${lat},${lon},15z`,
+"_blank"
+);
+
+}
+);
+
+}
+
+function findHospital(){
+
+navigator.geolocation.getCurrentPosition(
+(position)=>{
+
+const lat = position.coords.latitude;
+const lon = position.coords.longitude;
+
+window.open(
+`https://www.google.com/maps/search/hospital/@${lat},${lon},15z`,
+"_blank"
+);
+
+}
+);
+
+}
