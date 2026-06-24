@@ -60,3 +60,15 @@ document.getElementById(
 `✅ Saved: ${name} (${phone})`;
 
 }
+function saveContact(){
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+
+localStorage.setItem("emergencyName", name);
+localStorage.setItem("emergencyPhone", phone);
+
+document.getElementById("saved-contact").innerHTML =
+`✅ Saved: ${name} (${phone})`;
+
+}
