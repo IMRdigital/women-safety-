@@ -148,3 +148,16 @@ window.open(
 );
 
 }
+function findPolice() {
+    window.open(
+        "https://www.google.com/maps/search/police+station",
+        "_blank"
+    );
+}
+
+function findHospital() {
+    window.open(
+        "https://www.google.com/maps/search/hospital",
+        "_blank"
+    );
+}
