@@ -83,3 +83,33 @@ document.getElementById("saved-contact").innerHTML =
 `✅ Saved: ${name} (${phone})`;
 
 }
+const SpeechRecognition =
+window.SpeechRecognition ||
+window.webkitSpeechRecognition;
+
+const recognition =
+new SpeechRecognition();
+
+recognition.continuous = true;
+
+recognition.onresult = function(event){
+
+const text =
+event.results[event.results.length-1][0]
+.transcript.toLowerCase();
+
+if(
+text.includes("help") ||
+text.includes("emergency") ||
+text.includes("save me")
+){
+
+alert("🚨 Voice SOS Activated!");
+
+document.querySelector(".sos-btn").click();
+
+}
+
+};
+
+recognition.start();
